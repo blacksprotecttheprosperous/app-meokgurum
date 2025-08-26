@@ -157,6 +157,7 @@ checkTokenValidity = () => {
               />
             } 
           />
+        <Route path="/signup" element={<SignUpPage />} />    
         </Routes>
       </Router>
     );
