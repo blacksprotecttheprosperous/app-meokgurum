@@ -204,6 +204,17 @@ checkTokenValidity = () => {
             />
           }
         />
+                <Route
+          path="/MyPage"
+          element={
+            <MyPage
+              profileImage={profileImage}
+              setProfileImage={setProfileImage}
+              currentUser={currentUser}
+              onLogout={handleLogout}
+            />
+          }
+        />
         </Routes>
       </Router>
     );
