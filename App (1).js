@@ -19,7 +19,7 @@ function withNavigate(Component) {
 
 const MainBoardPageWithNavigate = withNavigate(MainBoardPage);
 const LoginPageWithNavigate = withNavigate(LoginPage);
-
+const SigunUppageWithNavigate= withNavigate(SignUpPage);
 class App extends Component {
   constructor(props) {
     super(props);
@@ -157,7 +157,13 @@ checkTokenValidity = () => {
               />
             } 
           />
-        <Route path="/signup" element={<SignUpPage />} />    
+        <Route 
+            path="/signup" 
+              element={
+                <SigunUppageWithNavigate 
+                  />
+                  } 
+                />    
         </Routes>
       </Router>
     );
