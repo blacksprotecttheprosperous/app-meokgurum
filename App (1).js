@@ -149,6 +149,23 @@ checkTokenValidity = () => {
               />
             }
           />
+            <Route
+          path="/change-password"
+          element={<ChangePasswordPage currentUser={currentUser} />}
+        />
+            <Route path="/findid" element={<FindIdentificationPage />} />
+        <Route path="/findpassword" element={<FindPasswordPage />} />
+            <Route
+          path="/new-post"
+          element={
+            <NewPostPage
+              isLoggedIn={isLoggedIn}
+              profileImage={profileImage}
+              onAddPost={addPost}
+              currentUser={currentUser}
+            />
+          }
+        />
           <Route 
             path="/login" 
             element={
@@ -163,7 +180,30 @@ checkTokenValidity = () => {
                 <SigunUppageWithNavigate 
                   />
                   } 
-                />    
+                />
+                <Route
+          path="/myposts"
+          element={
+            <MyPostsPage
+              isLoggedIn={isLoggedIn}
+              profileImage={profileImage}
+              posts={posts}
+              currentUser={currentUser}
+            />
+          }
+        />
+                <Route
+          path="/posts/:id"
+          element={
+            <PostDetailPage
+              isLoggedIn={isLoggedIn}
+              onLogout={handleLogout}
+              profileImage={profileImage}
+              posts={posts}
+              currentUser={currentUser}
+            />
+          }
+        />
         </Routes>
       </Router>
     );
