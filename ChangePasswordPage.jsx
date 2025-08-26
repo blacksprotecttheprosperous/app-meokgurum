@@ -64,7 +64,7 @@ function ChangePasswordPage({ currentUser }) {
         </div>
         <div className="user-info">
           <User size={26} /> 
-           // currentUser?.userName || "USER"   // css편집후 저 왼쪽 문장을 중괄호로 묶어주세요.
+          {currentUser?.userName || "USER"}
         </div>
       </header>
 
